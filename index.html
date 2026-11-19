@@ -2,10 +2,18 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- viewport-fit=cover（2026-11-04 移动端适配）：让页面铺到刘海/圆角之外，
+       安全区由 CSS 的 env(safe-area-inset-*) 让开（见 game.css 的 .mobile-shell）。
+       不加这个值时 iOS 会把整页挤进安全区，顶栏下方会多出一条空白。
+       interactive-widget=resizes-content（2026-11-04 第二批·键盘）：安卓 Chrome 弹软键盘时
+       把**布局视口**一起压矮，100dvh 随之下缩 → 对话页的输入框始终在键盘之上，
+       不会出现"打字时看不见自己打了什么"。iOS 不认这个值（由 visualViewport 兜底）。 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+  <!-- 手机浏览器地址栏/状态栏配色，与 --bg 同色，滚动时不成"两种米黄" -->
+  <meta name="theme-color" content="#F5F1E9" />
   <title>开局一个碗</title>
-  <script type="module" crossorigin src="./assets/index-iqb2NKd6.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-3_rK7OMV.css">
+  <script type="module" crossorigin src="./assets/index-_tYgPbnG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BQDoFLB-.css">
 </head>
 <body>
   <div id="root"></div>
